@@ -18,3 +18,7 @@
 * {
   @apply font-poppins;
 }
+
+html {
+  overflow-x: hidden;
+}
