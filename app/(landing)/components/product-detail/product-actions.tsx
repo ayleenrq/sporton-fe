@@ -1,15 +1,36 @@
-import { FiArrowRight, FiShoppingBag, FiShoppingCart } from "react-icons/fi";
+"use client";
+
+import {
+  FiArrowRight,
+  FiChevronDown,
+  FiChevronUp,
+  FiShoppingBag,
+} from "react-icons/fi";
 import Button from "../ui/button";
+import { useState } from "react";
 
 const ProductActions = () => {
+  const [qty, setQty] = useState(1);
+
   return (
     <div className="flex gap-5">
-      <div className="border border-gray-300 inline-flex w-fit min-w-20.5">
-        <div className="aspect-square text-xl font-medium border-r border-gray-300 flex justify-center items-center">
-          <span>2</span>
+      <div className="border border-gray-400 inline-flex w-fit min-w-20.5">
+        <div className="aspect-square text-xl font-medium border-r border-gray-400 flex justify-center items-center">
+          <span>{qty}</span>
         </div>
         <div className="flex flex-col ">
-            <button className=""></button>
+          <button
+            className="border-b border-gray-400 cursor-pointer h-1/2 aspect-square flex items-center justify-center"
+            onClick={() => setQty(qty + 1)}
+          >
+            <FiChevronUp />
+          </button>
+          <button
+            className="cursor-pointer h-1/2 aspect-square flex items-center justify-center"
+            onClick={() => setQty(qty > 1 ? qty - 1 : qty - 0)}
+          >
+            <FiChevronDown />
+          </button>
         </div>
       </div>
       <Button className="px-20 w-full">
