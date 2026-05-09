@@ -44,7 +44,7 @@ const HeroSection = () => {
           width={700}
           height={950}
           alt="image sporton hero"
-          className="absolute -right-10 top-1/2 -translate-y-1/2"
+          className="absolute -right-10 top-1/2 -translate-y-1/2 z-(-1)"
         />
       </div>
       <Image

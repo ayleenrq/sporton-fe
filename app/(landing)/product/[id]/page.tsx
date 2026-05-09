@@ -1,5 +1,6 @@
 import Image from "next/image";
 import ProductActions from "../../components/product-detail/product-actions";
+import PriceFormatter from "@/app/utils/price-formatter";
 
 const ProductsDetail = () => {
   return (
@@ -26,13 +27,7 @@ const ProductsDetail = () => {
           future of football footwear with v2's enhanced fit and cutting-edge
           traction.
         </p>
-        <div className="text-primary text-[32px] font-semibold mb-12">
-          {Intl.NumberFormat("id-ID", {
-            style: "currency",
-            currency: "IDR",
-            maximumSignificantDigits: 3,
-          }).format(458000)}
-        </div>
+        <div className="text-primary text-[32px] font-semibold mb-12">{PriceFormatter(458000)}</div>
         <ProductActions />
       </div>
     </main>
