@@ -9,6 +9,5 @@ export default function Home() {
     <HeroSection />
     <CategoriesSection />
     <ProductsSection />
-    <FooterSection />
   </main>
 }
