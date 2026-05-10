@@ -13,12 +13,14 @@ const Header = () => {
   return (
     <header>
       <div className="container flex justify-between gap-10 mx-auto py-7 sticky top-0% z-999">
-        <Image
-          src="/images/logo.svg"
-          alt="SportOn Logo"
-          width={127}
-          height={30}
-        />
+        <Link href={"/"}>
+          <Image
+            src="/images/logo.svg"
+            alt="SportOn Logo"
+            width={127}
+            height={30}
+          />
+        </Link>
         <nav className="flex gap-44 font-medium">
           <Link
             href="#"
@@ -31,7 +33,10 @@ const Header = () => {
         </nav>
         <div className="flex gap-10 relative">
           <FiSearch size={24} />
-          <button className="relative cursor-pointer" onClick={() => setIsCartPopupOpen(!isCartPopupOpen)}>
+          <button
+            className="relative cursor-pointer"
+            onClick={() => setIsCartPopupOpen(!isCartPopupOpen)}
+          >
             <FiShoppingBag size={24} />
             <div className="bg-primary rounded-full w-3.5 h-3.5 absolute -top-1 -right-1 text-[10px] text-white text-center">
               3
